@@ -2,7 +2,7 @@ var questionEl = document.querySelector('#question');
 var scoreText = document.querySelector('#score');
 var containerEl = document.querySelector('#question-container');
 var answersEl = Array.from(document.querySelector('#question'));
-let currentQuestion = 0;
+let index = 0;
 
 
 // if right, go to next question and add 1 to score
@@ -160,7 +160,7 @@ let currentQuestion = 0;
 
         const answerContent = document.createElement('p');
         answerContent.setAttribute('class', 'answer-text');
-        answerContent.setAttribute('data-question-index', questionIndex);
+        answerContent.setAttribute('data-question-index', index);
         answerContent.textContent = answerTitle;
 
         buttonContainer.appendChild(prefix);
@@ -176,30 +176,21 @@ let currentQuestion = 0;
 
 // add an event listener to the buttons to check if the answer is correct or not
 function onAnswerClicked(event) {
-    const target = event.target;  // element that fire this event
+    var target = event.target;
+    var answerIndex = target.getAttribute("data-question-index")
 
-    console.log(target.textContent);
+    if(questions[index].answers[answerIndex].isAnswer){
+        console.log(true)
+        // increment score
+    }
+    else {
+        console.log(false)
+        // todo: subtract the value from the timer
+        // increment score
+    }
 
-    // get the qs index from data attr  
-    
-    const questionIndex = 0
-    const question = questions[questionIndex];
-
-    const answers = question.answers;
-
-    const found = answers.find((answer) => {
-        return answer.title === target.textContent
-    });
-
-    console.log(found.isAnswer);
-
-    // 
-
-    currentQuestion ++;
-
-    // renderQuestion(currentQuestion)
-
-    renderQuestion(currentQuestion);
+    index++;
+    renderQuestion(index);
 }
 
- renderQuestion(currentQuestion);
+ renderQuestion(index);
