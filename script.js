@@ -132,6 +132,7 @@ let c = 30
     },
  ];
 
+
  function renderQuestion (questionIndex) {
 
     // ..
@@ -202,6 +203,8 @@ function onAnswerClicked(event) {
     
 }
 
+
+// Timer Function
 let timeLeft = 30
 
 function countDown() {

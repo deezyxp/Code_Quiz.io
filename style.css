@@ -90,3 +90,24 @@ h2 {
     margin: 0 auto;
     padding: 2rem;
 }
+
+.endformcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    border: none;
+    box-shadow: 0, 0.1rem 1.4rem cyan;
+}
+
+input:placeholder {
+    color: grey;
+}
