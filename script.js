@@ -1,5 +1,5 @@
 var questionEl = document.querySelector('#question');
-var scoreText = document.querySelector('#score');
+var scoreTextEl = document.querySelector('#score');
 var containerEl = document.querySelector('#question-container');
 var answersEl = Array.from(document.querySelector('#question'));
 let index = 0;
@@ -171,26 +171,33 @@ let index = 0;
         
     }
 
-
 }
+
+var score = 0
 
 // add an event listener to the buttons to check if the answer is correct or not
 function onAnswerClicked(event) {
     var target = event.target;
     var answerIndex = target.getAttribute("data-question-index")
 
-    if(questions[index].answers[answerIndex].isAnswer){
-        console.log(true)
+    if(questions[index].answers[answerIndex].isAnswer === true){
         // increment score
+        score++
+        scoreTextEl.innerHTML = score
+        console.log(score)
+
+    
+
     }
     else {
         console.log(false)
         // todo: subtract the value from the timer
-        // increment score
+        
     }
 
     index++;
     renderQuestion(index);
+    
 }
 
  renderQuestion(index);
