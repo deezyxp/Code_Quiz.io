@@ -2,6 +2,10 @@ body {
     color: white
 }
 
+h2 {
+    text-align: center;
+}
+
 .answer-container {
     display: flex;
     margin-bottom: 0.8rem;
@@ -16,7 +20,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 green;
     transform: scale(1.03);
-    transform :transform 100ms;
+    transform :transform 100ms; 
 }
 
 .answer-prefix {
@@ -37,6 +41,7 @@ body {
 .incorrect {
     background: linear-gradient(32deg, red 0%, red 100%);
 }
+
 
 /* HUD */
 #hud {
