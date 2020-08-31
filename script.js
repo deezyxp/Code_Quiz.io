@@ -2,8 +2,9 @@ var questionEl = document.querySelector('#question');
 var scoreTextEl = document.querySelector('#score');
 var containerEl = document.querySelector('#question-container');
 var answersEl = Array.from(document.querySelector('#question'));
+var timeEl = document.querySelector('#time');
 let index = 0;
-
+let c = 30
 
 // if right, go to next question and add 1 to score
 // increment the currQs var
@@ -132,6 +133,7 @@ let index = 0;
  ];
 
  function renderQuestion (questionIndex) {
+
     // ..
     containerEl.innerHTML = '';
 
@@ -199,5 +201,21 @@ function onAnswerClicked(event) {
     renderQuestion(index);
     
 }
+
+let timeLeft = 30
+
+function countDown() {
+    c = c - 1;
+    if (c < 30) {
+        timeEl.innerHTML = c;
+    }
+    
+    if (c < 1) {
+        window.clearInterval(update);
+        
+    }
+}
+
+update = setInterval("countDown()", 1000)
 
  renderQuestion(index);
