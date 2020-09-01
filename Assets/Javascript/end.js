@@ -1,3 +1,4 @@
+// Global DOM elements for END page
 var username = document.querySelector('#username')
 var saveBtn = document.querySelector('#saveBtn')
 var finalScoreEl = document.querySelector('#finalScore')
@@ -7,7 +8,7 @@ var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 var MAX_HIGH_SCORES = 5
 
 
-
+// Function on Save button click
 finalScoreEl.innerHTML = mostRecentScoreEl
 
 username.addEventListener("keyup", () => {

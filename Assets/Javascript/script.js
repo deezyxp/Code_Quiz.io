@@ -1,3 +1,4 @@
+// Global DOM elements
 var questionEl = document.querySelector('#question');
 var scoreTextEl = document.querySelector('#score');
 var containerEl = document.querySelector('#question-container');
@@ -9,19 +10,7 @@ let index = 0;
 let c = 30;
 var score = 0
 
-// if right, go to next question and add 1 to score
-// increment the currQs var
-
-// if wrong, go to next question and do not add to score, and deduct 10 seconds from timer, show red button
-
-// once questions finish go to end screen showing total score and a form to add in high score - ask name, redirect high score user to highscore.html
-
-
-
-
-
-
-
+// Question Array
  let questions = [
      {
          question: 'Commonly used data types do not include:',
@@ -135,10 +124,9 @@ var score = 0
     },
  ];
 
-
+// Create function to renderQuestion
  function renderQuestion (questionIndex) {
 
-    // ..
     containerEl.innerHTML = '';
 
     const question = questions[questionIndex];
