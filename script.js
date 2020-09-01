@@ -3,8 +3,12 @@ var scoreTextEl = document.querySelector('#score');
 var containerEl = document.querySelector('#question-container');
 var answersEl = Array.from(document.querySelector('#question'));
 var timeEl = document.querySelector('#time');
+
+// Constants
 let index = 0;
-let c = 30
+let c = 30;
+let questionCounter = 0;
+const MAX_QUESTIONS = 5;
 
 // if right, go to next question and add 1 to score
 // increment the currQs var
@@ -174,6 +178,7 @@ let c = 30
         
     }
 
+    questionCounter++
 }
 
 var score = 0
@@ -199,8 +204,11 @@ function onAnswerClicked(event) {
     }
 
     index++;
+
+    if (index > 4) {
+        return window.location.assign('end.html')
+    }
     renderQuestion(index);
-    
 }
 
 
