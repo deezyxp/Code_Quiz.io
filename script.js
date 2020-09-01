@@ -7,8 +7,7 @@ var timeEl = document.querySelector('#time');
 // Constants
 let index = 0;
 let c = 30;
-let questionCounter = 0;
-const MAX_QUESTIONS = 5;
+var score = 0
 
 // if right, go to next question and add 1 to score
 // increment the currQs var
@@ -178,10 +177,7 @@ const MAX_QUESTIONS = 5;
         
     }
 
-    questionCounter++
 }
-
-var score = 0
 
 // add an event listener to the buttons to check if the answer is correct or not
 function onAnswerClicked(event) {
@@ -193,9 +189,6 @@ function onAnswerClicked(event) {
         score++
         scoreTextEl.innerHTML = score
         console.log(score)
-
-    
-
     }
     else {
         console.log(false)
@@ -206,6 +199,7 @@ function onAnswerClicked(event) {
     index++;
 
     if (index > 4) {
+        localStorage.setItem('#mostRecentScore', score)
         return window.location.assign('end.html')
     }
     renderQuestion(index);
