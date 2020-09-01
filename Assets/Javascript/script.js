@@ -154,7 +154,7 @@ var score = 0
         const answer = answers[index];
 
         const answerTitle = answer.title;
-        // 
+    
 
 
         const buttonContainer = document.createElement('div');
@@ -185,13 +185,11 @@ function onAnswerClicked(event) {
     var answerIndex = target.getAttribute("data-question-index")
 
     if(questions[index].answers[answerIndex].isAnswer === true){
-        // increment score
-        scoreTextEl.innerHTML = c
         console.log(score)
     }
     else {
         console.log(false)
-        // todo: subtract the value from the timer
+        // subtract the value from the timer
         c -=5
     }
 
