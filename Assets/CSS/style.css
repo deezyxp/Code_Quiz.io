@@ -8,6 +8,7 @@
     padding: 0;
     font-size: 62.5%;
     font-family: 'Times New Roman', Times, serif;
+    color: white;
 }
 
 h1 {
@@ -44,8 +45,8 @@ h2 {
     width: 30rem;
     text-align: center;
     margin-bottom: 1rem;
-    color: cornflowerblue;
-    background: linear-gradient(90deg, green 0%, green 100%);
+    color: red;
+    background: linear-gradient(90deg, blue 0%, blue 100%);
     border-radius: 4px;
 }
 
@@ -110,4 +111,70 @@ input {
 
 input:placeholder {
     color: grey;
+}
+
+/* CSS for Game HTML */
+
+h2 {
+    text-align: center;
+}
+
+.answer-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: blue;
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.answer-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 blue;
+    transform: scale(1.03);
+    transform :transform 100ms; 
+}
+
+.answer-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.answer-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+
+/* HUD */
+#hud {
+    display: flex;
+    justify-content: center;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .answer-container {
+        min-width: 40rem;
+    }
+}
+
+/* High Score CSS */
+
+#highScoresList {
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
 }
