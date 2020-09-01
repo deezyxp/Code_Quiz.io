@@ -1,5 +1,5 @@
 :root {
-    background-color: darkslategray;
+    background-color: #A39594;
 }
 
 * {
@@ -7,8 +7,12 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Londrina Solid', cursive;
     color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
@@ -45,8 +49,8 @@ h2 {
     width: 30rem;
     text-align: center;
     margin-bottom: 1rem;
-    color: red;
-    background: linear-gradient(90deg, blue 0%, blue 100%);
+    color: dimgray;
+    background: linear-gradient(90deg, silver 0%, silver 100%);
     border-radius: 4px;
 }
 
@@ -64,7 +68,7 @@ h2 {
 }
 
 #highscorebtn {
-    background: linear-gradient(90deg, yellow 0%, yellow 100%)
+    background: linear-gradient(90deg, gold 0%, gold 100%)
 }
 
 #highscorebtn:hover {
@@ -82,8 +86,6 @@ h2 {
 }
 
 .container {
-    width: 100vw;
-    height: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,14 +126,14 @@ h2 {
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 4px;
-    background: blue;
+    background: grey;
     font-size: 3rem;
     min-width: 80rem;
 }
 
 .answer-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 blue;
+    box-shadow: 0 0.4rem 1.4rem 0 grey;
     transform: scale(1.03);
     transform :transform 100ms; 
 }
