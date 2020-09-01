@@ -186,20 +186,19 @@ function onAnswerClicked(event) {
 
     if(questions[index].answers[answerIndex].isAnswer === true){
         // increment score
-        score++
-        scoreTextEl.innerHTML = score
+        scoreTextEl.innerHTML = c
         console.log(score)
     }
     else {
         console.log(false)
         // todo: subtract the value from the timer
-        
+        c -=5
     }
 
     index++;
 
     if (index > 4) {
-        localStorage.setItem('#mostRecentScore', score)
+        localStorage.setItem('mostRecentScore', c)
         return window.location.assign('end.html')
     }
     renderQuestion(index);
@@ -207,7 +206,6 @@ function onAnswerClicked(event) {
 
 
 // Timer Function
-let timeLeft = 30
 
 function countDown() {
     c = c - 1;
@@ -217,7 +215,7 @@ function countDown() {
     
     if (c < 1) {
         window.clearInterval(update);
-        
+        return window.location.assign('end.html')
     }
 }
 
